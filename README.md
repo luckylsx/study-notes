@@ -1,4 +1,4 @@
-# rust-
+# rust
 rust 学习笔记
 
 ## rust 基础学习
