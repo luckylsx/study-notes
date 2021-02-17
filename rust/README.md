@@ -16,8 +16,8 @@ rust 学习笔记
 * 4.5 [切片](./src/basic_learning/04/1.5切片.md)
 
 ### struct 结构体与方法
-* 5.1 [struct定义和实例化](./src/basic_learning/06/5.1struct定义和实例化.md)
-* 5.2 [option枚举](./src/basic_learning/06/5.2struct的方法.md)
+* 5.1 [struct定义和实例化](./src/basic_learning/05/5.1struct定义和实例化.md)
+* 5.2 [option枚举](./src/basic_learning/05/5.2struct的方法.md)
 
 ### 枚举与匹配
 * 6.1 [6.1定义枚举](./src/basic_learning/06/6.1定义枚举.md)
