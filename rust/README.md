@@ -24,3 +24,11 @@ rust 学习笔记
 * 6.2 [option枚举](./src/basic_learning/06/6.2option枚举.md)
 * 6.3 [match匹配](./src/basic_learning/06/6.3match.md)
 * 6.4 [if-let匹配](./src/basic_learning/06/6.4if-let.md)
+
+### Package、Crate 及Module
+* 7.1 [Package、Crate及Module](./src/basic_learning/07/7.1package-Crate-定义mudule.md)
+* 7.2 [路径-1](./src/basic_learning/07/7.2路径.md)
+* 7.3 [路径-2](./src/basic_learning/07/7.3路径2.md)
+* 7.4 [use-1](./src/basic_learning/07/7.4use-1.md)
+* 7.5 [use-2](./src/basic_learning/07/7.5use-2.md)
+* 7.6 [模块代码分离](./src/basic_learning/07/7.6module-splite.md)
