@@ -1,6 +1,10 @@
 # rust
 rust 学习笔记
 
+> 本笔记来源b站
+> https://www.bilibili.com/video/BV1hp4y1k7SV?p=1
+> 作者：杨旭
+
 ## rust 基础学习
 ### 变量、数据类型及流程控制
 * 3.3. [复合数据类型](./src/basic_learning/03/3.3复合数据类型.md)
@@ -32,3 +36,12 @@ rust 学习笔记
 * 7.4 [use-1](./src/basic_learning/07/7.4use-1.md)
 * 7.5 [use-2](./src/basic_learning/07/7.5use-2.md)
 * 7.6 [模块代码分离](./src/basic_learning/07/7.6module-splite.md)
+
+### 常用数据类型
+
+* 8.1 [集合](./src/basic_learning/08/8.1常用集合.md)
+* 8.2 [vector + enum](./src/basic_learning/08/8.2vector+enum.md)
+* 8.3 [string 上](./src/basic_learning/08/8.3String(上).md)
+* 8.4 [string 下](./src/basic_learning/08/8.3String(下).md)
+* 8.5 [hashMap 上](./src/basic_learning/08/8.5hashMap(上).md)
+* 8.6 [hashMap 下](./src/basic_learning/08/8.5hashMap(下).md)
