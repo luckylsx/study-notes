@@ -44,11 +44,22 @@ session_id + date + file_id + block_id + 修改数据
 
 执行器和 InnoDB 引擎在执行这个简单的 update 语句时的内部流程。
 
+<img src="../image/update.webp" width="400px">
+
 1. 执行器先找引擎取 ID=2 这一行。ID 是主键，引擎直接用树搜索找到这一行。如果 ID=2 这一行所在的数据页本来就在内存中，就直接返回给执行器；否则，需要先从磁盘读入内存，然后再返回。
 2. 执行器拿到引擎给的行数据，把这个值加上 1，比如原来是 N，现在就是 N+1，得到新的一行数据，再调用引擎接口写入这行新数据。
 3. 引擎将这行新数据更新到内存中，同时将这个更新操作记录到 redo log 里面，此时 redo log 处于 prepare 状态。然后告知执行器执行完成了，随时可以提交事务。
 4. 执行器生成这个操作的 binlog，并把 binlog 写入磁盘。
 5. 执行器调用引擎的提交事务接口，引擎把刚刚写入的 redo log 改成提交（commit）状态，更新完成。
 
-<img src="../image/update.webp" width="400px">
+### 两阶段提交
 
+1 prepare阶段 -> 2 写binlog -> 3 commit
+
+* 当在2之前崩溃时:
+    * 重启恢复：后发现没有commit，回滚。
+    * 备份恢复：没有binlog 。
+一致
+* 当在3之前崩溃
+    * 重启恢复：虽没有commit，但满足prepare和binlog完整，所以重启后会自动commit。
+    * 备份：有binlog. 一致
