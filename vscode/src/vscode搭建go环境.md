@@ -55,10 +55,7 @@ Code Runner支持了 Node.js, Python, C++, Java, PHP, Perl, Ruby, Go等超过40�
 }
 ```
 
-
-
 grogram 替换成自己真实项目名称即可。此种方式比较简单，在打开任意go文件时，都可直接点击右上角运行按钮，即可启动程序运行。
-
 
 ## debug
 
