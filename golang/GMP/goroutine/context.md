@@ -56,3 +56,28 @@ Background是任何Context的根； 它永远不会被取消：
 func Background() Context
 ```
 
+WithCancel 和 WithTimeout 返回派生的 Context 值，这些值可以比父 Context 更早取消。 与传入请求关联的Context通常在请求处理程序返回时被取消。 WithCancel 也可用于在使用多个副本时取消冗余请求。 WithTimeout 可用于设置后端服务器请求的截止日期：
+
+```golang
+// WithCancel 通过父级context返回其 新context 并携带cancel 取消方法
+// parent.Done 关闭或取消被调用。
+func WithCancel(parent Context) (ctx Context, cancel CancelFunc)
+
+// CancelFunc 取消上下文。
+type CancelFunc func()
+
+// WithTimeout 返回父context的副本，其 Done channel 在 parent.Done 关闭、调用取消或超时后立即关闭。
+// 新context deadline 是 now+timeout 和父级context 的deadline（如果有）中的较早者。 
+// 如果计时器仍在运行，则取消函数会释放其资源。
+func WithTimeout(parent Context, timeout time.Duration) (Context, CancelFunc)
+```
+
+WithValue 提供了一种将请求范围的值与context相关联的方法：
+
+```golang
+// WithValue 返回父级context的副本，其 Value 方法为 key 返回 val。
+func WithValue(parent Context, key interface{}, val interface{}) Context
+```
+
+查看如何使用 context 包的最佳方法是通过一个工作示例。
+
