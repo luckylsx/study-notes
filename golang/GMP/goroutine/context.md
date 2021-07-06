@@ -81,3 +81,16 @@ func WithValue(parent Context, key interface{}, val interface{}) Context
 
 查看如何使用 context 包的最佳方法是通过一个工作示例。
 
+
+### 示例：Google 网页搜索
+
+我们的示例是一个 HTTP 服务器，它处理的url像 /search?q=golang&timeout=1s 并将查询参数"golang"转发到  Google Web Search API 呈现结果，timeout 参数告诉服务器在超时后取消请求。
+
+代码分为三个包：
+
+* [server](https://blog.golang.org/context/server/server.go) 为 /search 提供 main 函数和处理程序。
+* [userip](https://blog.golang.org/context/userip/userip.go) 提供从请求中提取用户 IP 地址并将其与附加到Context中
+* [google](https://blog.golang.org/context/google/google.go) 提供了用于向 Google 发送查询的搜索功能。
+
+### server端程序
+
