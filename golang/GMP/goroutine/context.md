@@ -94,3 +94,4 @@ func WithValue(parent Context, key interface{}, val interface{}) Context
 
 ### server端程序
 
+服务器程序通过为 golang 提供前几个谷歌搜索结果来处理像 /search?q=golang 这样的请求。 它注册 handleSearch 来处理 /search 端点。 处理程序创建一个名为 ctx 的初始上下文，并安排在处理程序返回时取消它。 如果请求包含超时 URL 参数，则在超时结束时会自动取消 Context：

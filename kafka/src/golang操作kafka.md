@@ -93,6 +93,12 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test01 -
 
 <img src="../img/consumer-consume-msg.jpg" witdth="500px">
 
+#### 删除topic
+
+```
+
+```
+
 
 ### 参考
 
