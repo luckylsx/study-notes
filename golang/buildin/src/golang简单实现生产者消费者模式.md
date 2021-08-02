@@ -6,9 +6,9 @@
 
 通过带缓冲的channel实现，channel的缓冲大小，可作为队列长度的缓冲大小。
 
-**demo**
+**代码示例**
 
-```
+```golang
 package main
 
 import (
