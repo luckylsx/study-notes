@@ -1,0 +1,35 @@
+{
+    "root": {
+        "data": {
+            "id": "cd66ztp489c0",
+            "created": 1627619599618,
+            "text": "redis"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cd66zzycp7c0",
+                    "created": 1627619613237,
+                    "text": "数据结构模块儿",
+                    "layout_mind_offset": {
+                        "x": -22,
+                        "y": 7
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cd670gsxu5s0",
+                            "created": 1627619649915,
+                            "text": "字符串"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
